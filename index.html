@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070910" />
+  <meta name="description" content="Yassin.dev — a creative developer portfolio exploring web development, interactive experiences, and digital ideas." />
+  <meta name="author" content="Yassin" />
+  <meta property="og:title" content="Yassin.dev — Developer Portfolio" />
+  <meta property="og:description" content="Curious mind. Creative code. Digital experiences." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%23070910%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22%2354f4ff%22 font-family=%22monospace%22%3EY%3C/text%3E%3C/svg%3E" />
+  <title>Yassin.dev // Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Yassin.dev home"><span class="brand-mark">Y</span><span>Yassin<span class="accent">.dev</span></span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a class="nav-link active" href="#home">HOME</a>
+      <a class="nav-link" href="#about">ABOUT</a>
+      <a class="nav-link" href="#skills">SKILLS</a>
+      <a class="nav-link" href="#projects">PROJECTS</a>
+      <a class="nav-link" href="#github">GITHUB</a>
+      <a class="nav-link" href="#terminal">TERMINAL</a>
+      <a class="nav-link" href="#contact">CONTACT</a>
+    </nav>
+    <div class="header-actions"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">LIGHT</span></button><a class="top-cta" href="#contact"><span class="status-dot"></span> AVAILABLE FOR PROJECTS</a></div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="eyebrow-line"></span> DIGITAL CREATOR / DEVELOPER</div>
+        <p class="hero-kicker">HELLO, WORLD. I’M</p>
+        <h1 class="glitch" data-text="Yassin.dev">Yassin<span class="gradient-text">.dev</span><span class="cursor">_</span></h1>
+        <h2>I build <span class="gradient-text" id="role-text">digital experiences</span><span class="type-caret">|</span></h2>
+        <p class="hero-description">I turn ideas into interactive digital experiences. Exploring code, creative technology, and the space where design meets logic.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">EXPLORE MY WORK <span>↗</span></a>
+          <a class="button button-ghost" href="#contact"><span class="play-icon">▶</span> LET’S CONNECT</a>
+        </div>
+        <div class="hero-meta">
+          <div><span class="meta-label">LOCATION</span><span class="meta-value">EGYPT / INTERNET</span></div>
+          <div><span class="meta-label">FOCUS</span><span class="meta-value">WEB / CREATIVE CODE</span></div>
+          <div><span class="meta-label">LOCAL TIME</span><span class="meta-value" id="live-clock">--:--:--</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="visual-topline"><span>FIG. 001 — YASSIN PROFILE</span><span class="live-label"><i></i> LIVE</span></div>
+        <div class="orbital-scene">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+          <div class="orbit-dot dot-one"></div><div class="orbit-dot dot-two"></div><div class="orbit-dot dot-three"></div>
+          <div class="core"><span class="core-symbol">&lt;/&gt;</span><span class="core-caption">CREATIVE<br>ENGINE</span></div>
+          <div class="scene-cross cross-a">+</div><div class="scene-cross cross-b">+</div>
+        </div>
+        <div class="code-card">
+          <div class="code-card-head"><span><i></i><i></i><i></i></span><span>profile.js</span><span class="code-lock">⌁</span></div>
+          <pre><code><span class="code-purple">const</span> <span class="code-blue">developer</span> = {
+  name: <span class="code-green">"Yassin.dev"</span>,
+  mindset: <span class="code-green">"always learning"</span>,
+  build: [<span class="code-green">"web"</span>, <span class="code-green">"ideas"</span>],
+  status: <span class="code-green">"creating..."</span>
+};
+
+<span class="code-purple">while</span> (curious) {
+  learn();
+  buildSomething();
+}</code></pre>
+        </div>
+        <div class="floating-tag tag-top"><span class="tag-icon">✳</span> CREATIVE MODE <b>ON</b></div>
+        <div class="floating-tag tag-bottom"><span class="tag-icon">⌘</span> STATUS <b>BUILDING</b></div>
+      </div>
+      <div class="scroll-cue"><span class="scroll-line"></span> SCROLL TO EXPLORE <span class="scroll-arrow">↓</span></div>
+    </section>
+
+    <div class="ticker" aria-label="Portfolio specialties"><div class="ticker-track">
+      <span>CREATIVE DEVELOPMENT</span><b>✳</b><span>FRONTEND ENGINEERING</span><b>✳</b><span>DIGITAL EXPERIMENTS</span><b>✳</b><span>INTERACTIVE DESIGN</span><b>✳</b>
+      <span>CREATIVE DEVELOPMENT</span><b>✳</b><span>FRONTEND ENGINEERING</span><b>✳</b><span>DIGITAL EXPERIMENTS</span><b>✳</b><span>INTERACTIVE DESIGN</span><b>✳</b>
+    </div></div>
+
+    <section class="section-wrap content-section" id="about">
+      <div class="section-heading reveal"><div><span class="section-index">01 / ABOUT</span><h2>Curiosity is my <span class="gradient-text">superpower.</span></h2></div><p class="section-aside">A LITTLE CONTEXT<br>BEHIND THE CODE.</p></div>
+      <div class="about-grid">
+        <div class="about-main panel reveal"><span class="panel-label">/ WHOAMI</span><h3>Not just writing code.<br><span class="muted">Building what’s next.</span></h3><p>I’m a developer-in-progress who loves experimenting with technology and bringing ideas to life. I believe great digital work should feel intuitive, look sharp, and solve a real problem.</p><p>This portfolio is my digital playground: a place to test ideas, share experiments, and keep getting better one project at a time.</p><a class="text-link" href="#contact">HAVE AN IDEA? LET’S TALK <span>↗</span></a></div>
+        <div class="about-stats">
+          <div class="stat-card panel reveal"><span class="stat-symbol">⌘</span><strong>01<span>+</span></strong><span class="stat-caption">MINDSET: BUILD & LEARN</span></div>
+          <div class="stat-card panel reveal"><span class="stat-symbol">◈</span><strong>∞</strong><span class="stat-caption">IDEAS IN PROGRESS</span></div>
+          <div class="mini-terminal panel reveal"><div class="terminal-title"><span>terminal — zsh</span><span>•••</span></div><p><span class="prompt">visitor@yassin:~$</span> whoami</p><p class="terminal-output">a curious developer.</p><p><span class="prompt">visitor@yassin:~$</span> <span class="terminal-blink">_</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap content-section" id="skills">
+      <div class="section-heading reveal"><div><span class="section-index">02 / TOOLKIT</span><h2>Tools of the <span class="gradient-text">trade.</span></h2></div><p class="section-aside">LEARNING. BUILDING.<br>REPEATING.</p></div>
+      <div class="skills-layout">
+        <div class="skills-intro reveal"><p>Every tool is a new way to turn an idea into something real. Here’s the stack I’m exploring and using to build.</p><div class="skill-note"><span class="status-dot"></span> SKILLS ARE ALWAYS EVOLVING</div></div>
+        <div class="skills-grid">
+          <article class="skill-card panel reveal"><div class="skill-top"><span class="skill-icon html-icon">5</span><span class="skill-level">01</span></div><h3>HTML5</h3><p>Structure & accessibility</p><div class="skill-bar"><span style="--level:85%"></span></div></article>
+          <article class="skill-card panel reveal"><div class="skill-top"><span class="skill-icon css-icon">✳</span><span class="skill-level">02</span></div><h3>CSS3</h3><p>Layout, motion & visual design</p><div class="skill-bar"><span style="--level:78%"></span></div></article>
+          <article class="skill-card panel reveal"><div class="skill-top"><span class="skill-icon js-icon">JS</span><span class="skill-level">03</span></div><h3>JavaScript</h3><p>Logic & interaction</p><div class="skill-bar"><span style="--level:65%"></span></div></article>
+          <article class="skill-card panel reveal"><div class="skill-top"><span class="skill-icon git-icon">⌘</span><span class="skill-level">04</span></div><h3>Git / GitHub</h3><p>Version control & collaboration</p><div class="skill-bar"><span style="--level:55%"></span></div></article>
+        </div>
+      </div>
+      <p class="skill-disclaimer">Skill bars are editable visual placeholders — update them to reflect your actual experience.</p>
+    </section>
+
+    <section class="section-wrap content-section" id="projects">
+      <div class="section-heading reveal"><div><span class="section-index">03 / SELECTED WORK</span><h2>Things I’ve <span class="gradient-text">built.</span></h2></div><a class="text-link section-view-link" href="#contact">HAVE A PROJECT? <span>↗</span></a></div>
+      <div class="project-tools reveal">
+        <label class="project-search" for="project-search"><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Search projects..." autocomplete="off" /><kbd>/</kbd></label>
+        <div class="project-filters" role="group" aria-label="Filter projects">
+          <button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">ALL <span>03</span></button>
+          <button class="filter-chip" type="button" data-filter="web app" aria-pressed="false">WEB APP</button>
+          <button class="filter-chip" type="button" data-filter="mini game" aria-pressed="false">MINI GAME</button>
+          <button class="filter-chip" type="button" data-filter="ui concept" aria-pressed="false">UI CONCEPT</button>
+        </div>
+        <p class="filter-status" id="filter-status" aria-live="polite">Showing all 3 concept projects</p>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card panel reveal" data-category="web app" data-search="atmos dashboard weather daily information web app html css javascript"><div class="project-art art-one"><div class="art-grid"></div><div class="weather-widget"><span class="weather-sun">☼</span><strong>24°</strong><small>GOOD DAY TO BUILD</small><div class="weather-lines"><i></i><i></i><i></i></div></div><span class="art-index">PROJECT / 001</span></div><div class="project-info"><div class="project-type">WEB APP <span>2026</span></div><h3>Atmos Dashboard</h3><p>A concept dashboard for keeping useful daily information in one clean interface.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="project-link" href="project.html?project=atmos" aria-label="View Atmos Dashboard project details">VIEW DETAILS <span>↗</span></a></div></article>
+        <article class="project-card panel reveal" data-category="mini game" data-search="neon runner arcade game javascript canvas"> <div class="project-art art-two"><div class="game-window"><div class="game-top"><span></span><span></span><span></span></div><div class="game-title">NEON<span>RUNNER</span></div><div class="game-player"></div><div class="game-obstacle"></div><div class="game-floor"></div><span class="game-score">SCORE: 00842</span></div><span class="art-index">PROJECT / 002</span></div><div class="project-info"><div class="project-type">MINI GAME <span>2026</span></div><h3>Neon Runner</h3><p>A fast-paced arcade concept with bold visuals, simple mechanics, and glowing effects.</p><div class="tag-list"><span>JavaScript</span><span>Canvas</span><span>Game UI</span></div><a class="project-link" href="project.html?project=neon-runner" aria-label="View Neon Runner project details">VIEW DETAILS <span>↗</span></a></div></article>
+        <article class="project-card panel reveal" data-category="ui concept" data-search="orbit assistant ai chat interface ui css interaction"> <div class="project-art art-three"><div class="chat-window"><div class="chat-head"><span class="chat-avatar">Y</span><div><b>ORBIT AI</b><small>ONLINE / READY</small></div><span class="chat-dots">•••</span></div><div class="chat-bubble bot-bubble">Hey there. What are we building today?</div><div class="chat-bubble user-bubble">Something awesome.</div><div class="chat-input">Type a message... <span>↑</span></div></div><span class="art-index">PROJECT / 003</span></div><div class="project-info"><div class="project-type">UI CONCEPT <span>2026</span></div><h3>Orbit Assistant</h3><p>A futuristic chat interface concept designed around clarity and a little personality.</p><div class="tag-list"><span>UI Design</span><span>CSS</span><span>Interaction</span></div><a class="project-link" href="project.html?project=orbit" aria-label="View Orbit Assistant project details">VIEW DETAILS <span>↗</span></a></div></article>
+      </div>
+      <p class="projects-note"><span>!</span> These are concept projects displayed as portfolio samples. Replace them with your real projects and working links.</p>
+    </section>
+
+
+
+    <section class="section-wrap content-section github-section" id="github">
+      <div class="section-heading reveal">
+        <div><span class="section-index">04 / OPEN SOURCE</span><h2>Connected to <span class="gradient-text">GitHub.</span></h2></div>
+        <a class="text-link section-view-link" id="github-profile-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">OPEN PROFILE <span>↗</span></a>
+      </div>
+      <p class="github-intro reveal">Your public GitHub profile and repositories, loaded live from GitHub. Set your username in <code>script.js</code> to connect your real account.</p>
+      <div class="github-profile panel reveal" id="github-profile" aria-live="polite">
+        <div class="github-avatar-wrap"><img id="github-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23101624'/%3E%3Ctext x='40' y='51' font-size='32' text-anchor='middle' fill='%2354f4ff' font-family='monospace'%3EY%3C/text%3E%3C/svg%3E" alt="GitHub profile avatar" width="76" height="76" />
+        </div>
+        <div class="github-profile-copy"><span class="panel-label">/ GITHUB PROFILE</span><h3 id="github-name">Loading GitHub profile…</h3><p id="github-bio">Loading public profile information for @yo2526862.</p><a id="github-username-link" class="github-handle" href="https://github.com/yo2526862" target="_blank" rel="noopener noreferrer">@yo2526862 ↗</a></div>
+        <div class="github-stats">
+          <div><strong id="github-repos-count">—</strong><span>PUBLIC REPOS</span></div>
+          <div><strong id="github-followers-count">—</strong><span>FOLLOWERS</span></div>
+          <div><strong id="github-following-count">—</strong><span>FOLLOWING</span></div>
+        </div>
+      </div>
+      <div class="github-repos-heading"><h3>PUBLIC REPOSITORIES</h3><button class="github-refresh" id="github-refresh" type="button">↻ REFRESH</button></div>
+      <div class="github-repos-grid" id="github-repos-grid">
+        <article class="github-repo panel github-repo-placeholder"><span class="repo-mark">⌘</span><h4>Waiting for GitHub</h4><p>Connect your username to load your public repositories here.</p></article>
+      </div>
+      <p class="github-status" id="github-status" role="status">Not connected yet — configure your GitHub username in script.js.</p>
+      <p class="github-disclaimer">Only public profile information and public repositories are shown. No password or access token is needed.</p>
+    </section>
+
+    <section class="section-wrap content-section terminal-section" id="terminal">
+      <div class="section-heading reveal"><div><span class="section-index">04 / INTERACTIVE SHELL</span><h2>Enter the <span class="gradient-text">terminal.</span></h2></div><p class="section-aside">A SMALL COMMAND LINE<br>FOR CURIOUS VISITORS.</p></div>
+      <p class="terminal-intro reveal">Try a command below. Type <code>help</code> to see what this little portfolio terminal can do.</p>
+      <div class="interactive-terminal panel reveal" id="interactive-terminal" aria-label="Interactive portfolio terminal">
+        <div class="interactive-terminal-head"><div class="terminal-window-dots"><i></i><i></i><i></i></div><span>visitor@yassin.dev: ~/portfolio</span><button type="button" id="terminal-clear" class="terminal-clear">CLEAR</button></div>
+        <div class="terminal-output-area" id="terminal-output" role="log" aria-live="polite" aria-relevant="additions text">
+          <p class="terminal-welcome">YASSIN.DEV SHELL v1.0.0 — local demo, no server connection.</p>
+          <p>Type <code>help</code> to list available commands.</p>
+        </div>
+        <form class="terminal-input-row" id="terminal-form" autocomplete="off">
+          <label for="terminal-input"><span class="terminal-prompt">visitor@yassin:~$</span></label>
+          <input id="terminal-input" name="command" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Enter a terminal command" placeholder="type help and press Enter" />
+          <span class="terminal-caret" aria-hidden="true">▍</span>
+        </form>
+        <div class="terminal-foot"><span><i></i> LOCAL SIMULATION</span><span>↑ / ↓ HISTORY</span><span>ESC CLEAR INPUT</span></div>
+      </div>
+      <p class="terminal-disclaimer">This is a safe, simulated terminal for portfolio commands. It does not run operating-system commands or access your computer.</p>
+    </section>
+
+    <section class="contact-section" id="contact"><div class="section-wrap contact-inner">
+      <div class="contact-copy reveal"><span class="section-index">05 / CONTACT</span><h2>Have a signal?<br><span class="gradient-text">Let’s connect.</span></h2><p>Got an idea, a collaboration, or just want to talk about tech? Send a message and let’s make something interesting.</p><div class="contact-status"><span class="status-dot"></span> OPEN TO LEARNING & COLLABORATION</div></div>
+      <form class="contact-form panel reveal" id="contact-form">
+        <div class="form-heading"><span>TRANSMIT A MESSAGE</span><span class="form-code">MSG_001</span></div>
+        <label for="name">YOUR NAME</label><input id="name" name="name" type="text" placeholder="Enter your name" required maxlength="80" />
+        <label for="email">YOUR EMAIL</label><input id="email" name="email" type="email" placeholder="you@example.com" required maxlength="120" />
+        <label for="message">MESSAGE</label><textarea id="message" name="message" rows="4" placeholder="Tell me what you have in mind..." required maxlength="1500"></textarea>
+        <button class="button button-primary submit-button" type="submit">PREPARE EMAIL <span>↗</span></button>
+        <p class="form-note" id="form-note">This form opens your default email app; it does not send or store messages itself.</p>
+      </form>
+    </div></section>
+  </main>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top" title="Back to top">↑</button>
+  <footer class="footer section-wrap"><a class="brand footer-brand" href="#home"><span class="brand-mark">Y</span><span>Yassin<span class="accent">.dev</span></span></a><p>DESIGNED IN THE DIGITAL VOID <span>✳</span> BUILT WITH CURIOSITY</p><a href="#home" class="back-top">BACK TO TOP ↑</a><div class="footer-bottom"><span>© <span id="year"></span> YASSIN.DEV. ALL SYSTEMS NOMINAL.</span><span>HTML / CSS / JS</span></div></footer>
+</body>
+</html>
