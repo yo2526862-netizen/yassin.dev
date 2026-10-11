@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070910" />
+  <meta name="description" content="Explore a project concept from Yassin.dev, a creative developer portfolio." />
+  <title>Project Details // Yassin.dev</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%23070910%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22%2354f4ff%22 font-family=%22monospace%22%3EY%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="project.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar detail-topbar">
+    <a class="brand" href="index.html#home" aria-label="Yassin.dev home"><span class="brand-mark">Y</span><span>Yassin<span class="accent">.dev</span></span></a>
+    <nav class="nav"><a class="nav-link" href="index.html#about">ABOUT</a><a class="nav-link" href="index.html#projects">PROJECTS</a><a class="nav-link" href="index.html#terminal">TERMINAL</a></nav>
+    <div class="header-actions"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">LIGHT</span></button><a class="top-cta" href="index.html#contact"><span class="status-dot"></span> CONTACT</a></div>
+  </header>
+  <main class="section-wrap project-detail-wrap" id="project-detail">
+    <a class="project-back" href="index.html#projects">← BACK TO ALL PROJECTS</a>
+    <div id="project-content" aria-live="polite"></div>
+  </main>
+  <footer class="footer section-wrap detail-footer"><a class="brand footer-brand" href="index.html#home"><span class="brand-mark">Y</span><span>Yassin<span class="accent">.dev</span></span></a><p>DESIGNED IN THE DIGITAL VOID <span>✳</span> BUILT WITH CURIOSITY</p><a href="#" class="back-top" id="back-top">BACK TO TOP ↑</a><div class="footer-bottom"><span>© <span id="year"></span> YASSIN.DEV. ALL SYSTEMS NOMINAL.</span><span>HTML / CSS / JS</span></div></footer>
+</body>
+</html>
