@@ -126,7 +126,7 @@ setTimeout(typeRole, 1800);
 
 // Contact form: prepare an email in the visitor's default mail application.
 // Replace the address below with your own email before publishing.
-const CONTACT_EMAIL = "your-email@example.com"; // Replace this with your real email before publishing.
+const CONTACT_EMAIL = "yo2526862@gmail.com"; // Replace this with your real email before publishing.
 $("#contact-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const form = event.currentTarget;
